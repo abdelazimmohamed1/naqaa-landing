@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="عيادة نقاء لطب الأسنان في مدينة نصر: كشف بدون انتظار، خطة علاج مكتوبة بسعرها قبل ما نبدأ، وتعقيم كامل.">
+  <title>عيادة نقاء لطب الأسنان</title>
+
+  <!-- الخطوط -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- ملف التنسيقات -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- شريط التنقل -->
+  <nav>
+    <div class="wrap">
+      <a class="logo" href="#top">نقاء</a>
+      <ul>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="#visit">رحلة الزيارة</a></li>
+        <li><a href="#reviews">آراء المرضى</a></li>
+        <li><a href="#faq">أسئلة شائعة</a></li>
+      </ul>
+      <a class="btn" href="#book">احجز كشف</a>
+    </div>
+  </nav>
+
+  <!-- قسم البداية + فورم الحجز -->
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <h1>ابتسامتك تستاهل دكتور <mark>بيسمعك</mark> قبل ما يعالجك</h1>
+        <p>عيادة نقاء في مدينة نصر: كشف بدون انتظار، خطة علاج مكتوبة بسعرها قبل ما نبدأ، وتعقيم كامل لكل أداة قدامك.</p>
+        <div class="cta">
+          <a class="btn" href="#book">احجز كشف بـ 150 جنيه</a>
+          <a class="btn alt" href="#services">شوف الخدمات</a>
+        </div>
+        <div class="proof">
+          <div><b>+4,200</b><span>مريض اتعالج عندنا</span></div>
+          <div><b>4.9/5</b><span>تقييم جوجل</span></div>
+          <div><b>10 دقائق</b><span>متوسط وقت الانتظار</span></div>
+        </div>
+      </div>
+
+      <!-- فورم الحجز: التحقق من رقم الموبايل بخاصية pattern -->
+      <div class="book" id="book">
+        <form id="f">
+          <h3>احجز موعدك</h3>
+          <small>هنكلمك خلال ساعة نأكد الميعاد.</small>
+
+          <label for="n">الاسم</label>
+          <input id="n" required autocomplete="name">
+
+          <label for="p">رقم الموبايل</label>
+          <input id="p" type="tel" required inputmode="tel" pattern="01[0-9]{9}" title="رقم مصري من 11 رقم يبدأ بـ 01" autocomplete="tel">
+
+          <label for="s">نوع الخدمة</label>
+          <select id="s">
+            <option>كشف وفحص</option>
+            <option>تنظيف وتبييض</option>
+            <option>حشو وعلاج عصب</option>
+            <option>تقويم</option>
+            <option>زراعة</option>
+          </select>
+
+          <button class="btn" type="submit">أكد الحجز</button>
+        </form>
+
+        <!-- رسالة النجاح: بتظهر بعد الحجز (انظر script.js) -->
+        <div class="ok" id="ok" role="status">
+          <strong>تم استلام طلبك</strong>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- الخدمات والأسعار -->
+  <section class="band" id="services">
+    <div class="wrap">
+      <h2>الخدمات وأسعارها واضحة من الأول</h2>
+      <p class="lead">مفيش مفاجآت في الحساب. السعر اللي هتشوفه هنا هو بداية الأسعار، والدكتور بيأكد الرقم النهائي بعد الكشف.</p>
+      <div class="grid">
+        <div class="svc">
+          <h3>كشف وفحص شامل</h3>
+          <p>أشعة بانوراما وخطة علاج مكتوبة.</p>
+          <em>150 جنيه</em>
+        </div>
+        <div class="svc">
+          <h3>تنظيف وتبييض</h3>
+          <p>جلسة واحدة وأسنان أفتح بدرجتين أو تلاتة.</p>
+          <em>من 600 جنيه</em>
+        </div>
+        <div class="svc">
+          <h3>حشو وعلاج عصب</h3>
+          <p>تخدير موضعي ومن غير ألم أثناء الجلسة.</p>
+          <em>من 450 جنيه</em>
+        </div>
+        <div class="svc">
+          <h3>تقويم الأسنان</h3>
+          <p>معدني أو شفاف بتقسيط على 12 شهر.</p>
+          <em>من 9,000 جنيه</em>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- خطوات أول زيارة -->
+  <section id="visit">
+    <div class="wrap">
+      <h2>إيه اللي بيحصل في أول زيارة</h2>
+      <p class="lead">الزيارة الأولى بتاخد حوالي 40 دقيقة.</p>
+      <ol class="steps">
+        <li>
+          <h3>استقبال بدون انتظار</h3>
+          <p>بتدخل على الميعاد اللي حجزته بالظبط.</p>
+        </li>
+        <li>
+          <h3>فحص وأشعة</h3>
+          <p>الدكتور بيفحص ويوريك الأشعة على الشاشة.</p>
+        </li>
+        <li>
+          <h3>خطة مكتوبة بالسعر</h3>
+          <p>بتاخد الخطة معاك وتقرر براحتك.</p>
+        </li>
+        <li>
+          <h3>العلاج على مراحل</h3>
+          <p>بنبدأ بالأهم، وبنتابع معاك على واتساب.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- آراء المرضى -->
+  <section class="band" id="reviews">
+    <div class="wrap">
+      <h2>مرضانا بيقولوا إيه</h2>
+      <p class="lead">تقييمات حقيقية من مرضى عالجوا عندنا.</p>
+      <div class="grid">
+        <div class="quote">
+          <p>أول مرة أخرج من عيادة أسنان من غير ما أخاف. الدكتور شرحلي كل خطوة.</p>
+          <cite>منى سعيد، تنظيف وحشو</cite>
+        </div>
+        <div class="quote">
+          <p>السعر اتقال لي قبل ما أبدأ وفضل زي ما هو للآخر. ده نادر.</p>
+          <cite>أحمد فتحي، تقويم</cite>
+        </div>
+        <div class="quote">
+          <p>جبت ولادي التلاتة، والمعاملة مع الأطفال تحفة.</p>
+          <cite>هبة محمود، كشف أطفال</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الأسئلة الشائعة -->
+  <section id="faq">
+    <div class="wrap">
+      <h2>أسئلة بتتسأل كتير</h2>
+      <p class="lead">لو سؤالك مش هنا، ابعتلنا واتساب.</p>
+      <details>
+        <summary>هل الكشف بيشمل أشعة؟</summary>
+        <p>أيوه، سعر الكشف شامل أشعة بانوراما رقمية.</p>
+      </details>
+      <details>
+        <summary>ينفع أقسّط سعر العلاج؟</summary>
+        <p>التقويم والزراعة متاحة بالتقسيط. باقي الخدمات بتتدفع بعد كل جلسة.</p>
+      </details>
+      <details>
+        <summary>العيادة بتشتغل أيام إيه؟</summary>
+        <p>من السبت للخميس، من 12 الضهر لـ 10 بالليل.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- دعوة الحجز الأخيرة -->
+  <div class="wrap" style="padding-bottom:72px">
+    <div class="final">
+      <h2>خد أول خطوة النهارده</h2>
+      <p>احجز كشف بـ 150 جنيه، وهتمشي من أول زيارة وفي إيدك خطة علاج واضحة.</p>
+      <a class="btn" href="#book">احجز موعدك</a>
+    </div>
+  </div>
+
+  <!-- الفوتر -->
+  <footer>
+    <div class="wrap">
+      <span>عيادة نقاء، مدينة نصر، القاهرة</span>
+      <span>موبايل وواتساب: 01000000000</span>
+      <span>© 2026 عيادة نقاء. جميع الحقوق محفوظة</span>
+      <span>تصميم وتطوير: Abdelazim Mohamed</span>
+    </div>
+  </footer>
+
+  <!-- سكربت رسالة تأكيد الحجز -->
+  <script src="script.js"></script>
+</body>
+</html>
